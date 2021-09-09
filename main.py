@@ -88,7 +88,7 @@
 #
 # Task 7
 # def biggest_guy(age, age1, age2):
-#
+#    return max(age, age1, age2)
 # def test_biggest_guy():
 #   try:
 #     assert biggest_guy(1, 3, 2) == 3
