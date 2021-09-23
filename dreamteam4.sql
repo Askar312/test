@@ -1,0 +1,15 @@
+select * from kivano inner join sulpak on kivano.category_id = 1 and sulpak.category_id = 2;
+select * from sulpak inner join kivano on sulpak.product_name = 'Iphone 12' and  kivano.product_name = 'Iphone 12';
+select * from  produsers inner join categories on produsers.created_at = categories.created_at;
+select * from produsers where produser_country = 'China';
+select * from kivano inner join sulpak on kivano.item_id > 0 and sulpak.item_id > 0;
+select * from sulpak left join kivano on (sulpak.product_name = kivano.product_name) where kivano.product_name is null;
+select * from produsers inner join sulpak on produsers.produser_company like '%m%';
+select * from sulpak inner join kivano on sulpak.product_name = kivano.product_name;
+select * from produsers inner join kivano on produsers.produser_company like '%k%';
+update produsers set produser_company = 'Apple' where produser_id = 100;
+update produsers set produser_country= 'Kyrgyzstan' where produser_id = 100;
+select * from kivano left join sulpak on kivano.product_name = sulpak.product_name where kivano.product_name is not null;
+select * from produsers max(produser_id) where produser_country = 'Japan';
+update sulpak set price  = sulpak.price + 1000;
+select * from kivano inner join sulpak on max(kivano.price) - min(sulpak.price);
